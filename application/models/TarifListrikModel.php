@@ -14,7 +14,8 @@ class TarifListrikModel extends CI_Model {
     }
 
     public function getTarifById($id) {
-        return $this->db->get_where($this->table, ['id' => $id])->row();
+        // return $this->db->get_where($this->table, ['id' => $id])->row();
+        return $this->db->get_where('tbTarifListrik', ['id' => $id])->row();
     }
 
     public function insertTarif($data) {

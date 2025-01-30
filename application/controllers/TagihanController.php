@@ -45,12 +45,23 @@ class TagihanController extends CI_Controller {
             'bulan_tagihan' => $this->input->post('bulan_tagihan'),
             'pemakaian' => $this->input->post('pemakaian')
         ];
-        $this->TagihanModel->updateTagihan($id, $data);
+
+        if ($this->TagihanModel->updateTagihan($id, $data)) {
+            $this->session->set_flashdata('success', 'Tagihan berhasil diperbarui!');
+        } else {
+            $this->session->set_flashdata('error', 'Gagal memperbarui tagihan.');
+        }
+
         redirect('TagihanController');
     }
 
     public function delete($id) {
-        $this->TagihanModel->deleteTagihan($id);
+        if ($this->TagihanModel->deleteTagihan($id)) {
+            $this->session->set_flashdata('success', 'Tagihan berhasil dihapus!');
+        } else {
+            $this->session->set_flashdata('error', 'Gagal menghapus tagihan.');
+        }
+
         redirect('TagihanController');
     }
 }

@@ -45,12 +45,23 @@ class PelangganController extends CI_Controller {
             'nama_pelanggan' => $this->input->post('nama_pelanggan'),
             'alamat' => $this->input->post('alamat')
         ];
-        $this->PelangganModel->updatePelanggan($id, $data);
+
+        if ($this->PelangganModel->updatePelanggan($id, $data)) {
+            $this->session->set_flashdata('success', 'Pelanggan berhasil diperbarui!');
+        } else {
+            $this->session->set_flashdata('error', 'Gagal memperbarui pelanggan.');
+        }
+
         redirect('PelangganController');
     }
 
     public function delete($id) {
-        $this->PelangganModel->deletePelanggan($id);
+        if ($this->PelangganModel->deletePelanggan($id)) {
+            $this->session->set_flashdata('success', 'Pelanggan berhasil dihapus!');
+        } else {
+            $this->session->set_flashdata('error', 'Gagal menghapus pelanggan.');
+        }
+
         redirect('PelangganController');
     }
 }

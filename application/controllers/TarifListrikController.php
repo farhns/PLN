@@ -45,12 +45,23 @@ class TarifListrikController extends CI_Controller {
             'beban' => $this->input->post('beban'),
             'tarif_perkwh' => $this->input->post('tarif_perkwh')
         ];
-        $this->TarifListrikModel->updateTarif($id, $data);
+
+        if ($this->TarifListrikModel->updateTarif($id, $data)) {
+            $this->session->set_flashdata('success', 'Tarif listrik berhasil diperbarui!');
+        } else {
+            $this->session->set_flashdata('error', 'Gagal memperbarui tarif listrik.');
+        }
+
         redirect('TarifListrikController');
     }
 
     public function delete($id) {
-        $this->TarifListrikModel->deleteTarif($id);
+        if ($this->TarifListrikModel->deleteTarif($id)) {
+            $this->session->set_flashdata('success', 'Tarif listrik berhasil dihapus!');
+        } else {
+            $this->session->set_flashdata('error', 'Gagal menghapus tarif listrik.');
+        }
+
         redirect('TarifListrikController');
     }
 }
