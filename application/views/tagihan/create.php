@@ -6,7 +6,19 @@
 </head>
 <body>
     <h2>Tambah Tagihan</h2>
-    <form action="<?= site_url('TagihanController/store') ?>" method="post">
+
+    <?php if ($this->session->flashdata('success')): ?>
+        <p style="color:green"><?= $this->session->flashdata('success'); ?></p>
+    <?php endif; ?>
+
+    <?php if ($this->session->flashdata('error')): ?>
+        <p style="color:red"><?= $this->session->flashdata('error'); ?></p>
+    <?php endif; ?>
+    
+    <!-- <form action="<?= site_url('TagihanController/store') ?>" method="post"> -->
+    <form action="http://localhost/PLN/index.php/TagihanController/store" method="post">
+        <label>ID Pelanggan:</label>
+        <input type="number" name="tbPelanggan_id" required><br>
         <label>Tahun Tagihan:</label>
         <input type="text" name="tahun_tagihan" required><br>
         <label>Bulan Tagihan:</label>

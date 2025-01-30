@@ -23,8 +23,14 @@ class TagihanController extends CI_Controller {
             'bulan_tagihan' => $this->input->post('bulan_tagihan'),
             'pemakaian' => $this->input->post('pemakaian')
         ];
-        $this->TagihanModel->insertTagihan($data);
-        redirect('TagihanController');
+
+        if ($this->TagihanModel->insertTagihan($data)) {
+            $this->session->set_flashdata('success', 'Tagihan berhasil ditambahkan!');
+        } else {
+            $this->session->set_flashdata('error', 'Gagal menambahkan tagihan.');
+        }
+
+        redirect('TagihanController/create');
     }
 
     public function edit($id) {

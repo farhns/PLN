@@ -23,8 +23,14 @@ class TarifListrikController extends CI_Controller {
             'beban' => $this->input->post('beban'),
             'tarif_perkwh' => $this->input->post('tarif_perkwh')
         ];
-        $this->TarifListrikModel->insertTarif($data);
-        redirect('TarifListrikController');
+
+        if ($this->TarifListrikModel->insertTarif($data)) {
+            $this->session->set_flashdata('success', 'Tarif listrik berhasil ditambahkan!');
+        } else {
+            $this->session->set_flashdata('error', 'Gagal menambahkan tarif listrik.');
+        }
+
+        redirect('TarifListrikController/create');
     }
 
     public function edit($id) {

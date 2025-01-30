@@ -23,8 +23,14 @@ class PelangganController extends CI_Controller {
             'nama_pelanggan' => $this->input->post('nama_pelanggan'),
             'alamat' => $this->input->post('alamat')
         ];
-        $this->PelangganModel->insertPelanggan($data);
-        redirect('PelangganController');
+
+        if ($this->PelangganModel->insertPelanggan($data)) {
+            $this->session->set_flashdata('success', 'Pelanggan berhasil ditambahkan!');
+        } else {
+            $this->session->set_flashdata('error', 'Gagal menambahkan pelanggan.');
+        }
+
+        redirect('PelangganController/create');
     }
 
     public function edit($id) {

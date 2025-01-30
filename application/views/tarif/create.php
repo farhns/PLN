@@ -6,7 +6,19 @@
 </head>
 <body>
     <h2>Tambah Tarif Listrik</h2>
-    <form action="<?= site_url('TarifListrikController/store') ?>" method="post">
+
+    <?php if ($this->session->flashdata('success')): ?>
+        <p style="color:green"><?= $this->session->flashdata('success'); ?></p>
+    <?php endif; ?>
+
+    <?php if ($this->session->flashdata('error')): ?>
+        <p style="color:red"><?= $this->session->flashdata('error'); ?></p>
+    <?php endif; ?>
+
+    <!-- <form action="<?= site_url('TarifListrikController/store') ?>" method="post"> -->
+    <form action="http://localhost/PLN/index.php/TarifListrikController/store" method="post">
+        <label>ID User:</label>
+        <input type="number" name="tbUser_id" required><br>
         <label>Kode Tarif:</label>
         <input type="text" name="kdtarif" required><br>
         <label>Beban:</label>
