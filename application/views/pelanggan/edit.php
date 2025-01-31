@@ -16,6 +16,7 @@
         <label>Alamat:</label>
         <input type="text" name="alamat" value="<?= $pelanggan->alamat ?>" required><br>
         <button type="submit">Update</button>
+        <button onclick="window.history.back()" style="cursor: pointer;">Kembali</button>
     </form>
 </body>
 </html>

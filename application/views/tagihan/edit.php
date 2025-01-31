@@ -16,6 +16,7 @@
         <label>Pemakaian (kWh):</label>
         <input type="number" name="pemakaian" value="<?= $tagihan->pemakaian ?>" required><br>
         <button type="submit">Update</button>
+        <button onclick="window.history.back()" style="cursor: pointer;">Kembali</button>
     </form>
 </body>
 </html>

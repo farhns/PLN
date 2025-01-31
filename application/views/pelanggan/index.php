@@ -28,5 +28,9 @@
         </tr>
         <?php endforeach; ?>
     </table>
+    <br>
+    <a href="<?= site_url('DashboardController') ?>" style="">
+        Kembali ke Dashboard
+    </a>
 </body>
 </html>

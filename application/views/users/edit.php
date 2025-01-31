@@ -14,6 +14,7 @@
         <label>Hak Akses:</label>
         <input type="number" name="hak_akses" value="<?= $user->hak_akses ?>" required><br>
         <button type="submit">Update</button>
+        <button onclick="window.history.back()" style="cursor: pointer;">Kembali</button>
     </form>
 </body>
 </html>

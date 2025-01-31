@@ -26,6 +26,7 @@
         <label>Tarif per kWh:</label>
         <input type="number" name="tarif_perkwh" required><br>
         <button type="submit">Simpan</button>
+        <button onclick="window.history.back()" style="cursor: pointer;">Kembali</button>
     </form>
 </body>
 </html>

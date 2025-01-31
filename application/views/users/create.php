@@ -24,7 +24,8 @@
         <input type="password" name="password" required><br>
         <label>Hak Akses:</label>
         <input type="number" name="hak_akses" required><br>
-        <button type="submit">Simpan</button>
+        <button type="submit" style="cursor: pointer;">Simpan</button>
+        <button onclick="window.history.back()" style="cursor: pointer;">Kembali</button>
     </form>
 </body>
 </html>

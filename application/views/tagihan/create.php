@@ -26,6 +26,7 @@
         <label>Pemakaian (kWh):</label>
         <input type="number" name="pemakaian" required><br>
         <button type="submit">Simpan</button>
+        <button onclick="window.history.back()" style="cursor: pointer;">Kembali</button>
     </form>
 </body>
 </html>
