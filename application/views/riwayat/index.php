@@ -20,6 +20,7 @@
         <tr>
             <td><?= $r->id ?></td>
             <td><?= $r->tbPelanggan_id ?></td>
+            <td><?= $r->nama_pelanggan ?></td>
             <td><?= $r->tahun_tagihan ?></td>
             <td><?= $r->bulan_tagihan ?></td>
             <td><?= $r->pemakaian ?> kWh</td>

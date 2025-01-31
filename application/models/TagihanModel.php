@@ -30,8 +30,14 @@ class TagihanModel extends CI_Model {
         return $this->db->where('id', $id)->delete($this->table);
     }
 
+    // public function getRiwayatPembayaran() {
+    //     return $this->db->get_where('tbTagihan', ['status' => 'Lunas'])->result();
+    // }
     public function getRiwayatPembayaran() {
-        return $this->db->get_where('tbTagihan', ['status' => 'Lunas'])->result();
+        $this->db->select('tbTagihan.*, tbPelanggan.nama_pelanggan'); // Ambil semua data dari tbTagihan + nama_pelanggan
+        $this->db->from('tbTagihan');
+        $this->db->join('tbPelanggan', 'tbPelanggan.id = tbTagihan.tbPelanggan_id', 'left'); // Join dengan tbPelanggan
+        $this->db->where('tbTagihan.status', 'Lunas');
+        return $this->db->get()->result();
     }
-
 }
