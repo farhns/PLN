@@ -22,10 +22,16 @@ class TagihanModel extends CI_Model {
     }
 
     public function updateTagihan($id, $data) {
-        return $this->db->where('id', $id)->update($this->table, $data);
+        // return $this->db->where('id', $id)->update($this->table, $data);
+        return $this->db->where('id', $id)->update('tbTagihan', $data);
     }
 
     public function deleteTagihan($id) {
         return $this->db->where('id', $id)->delete($this->table);
     }
+
+    public function getRiwayatPembayaran() {
+        return $this->db->get_where('tbTagihan', ['status' => 'Lunas'])->result();
+    }
+
 }
