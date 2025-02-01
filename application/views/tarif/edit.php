@@ -1,22 +1,30 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <title>Edit Tarif Listrik</title>
-</head>
-<body>
-    <h2>Edit Tarif Listrik</h2>
+<?php $this->load->view('partials/sidebar'); ?>
+<div class="container-fluid">
+    <h1 class="h3 mb-4 text-gray-800">Edit Tarif Listrik</h1>
 
-    <!-- <form action="<?= site_url('TarifListrikController/update/'.$tarif->id) ?>" method="post"> -->
-    <form action="<?= 'http://localhost/PLN/index.php/TarifListrikController/update/'.$tarif->id ?>" method="post">
-        <label>Kode Tarif:</label>
-        <input type="text" name="kdtarif" value="<?= $tarif->kdtarif ?>" required><br>
-        <label>Beban:</label>
-        <input type="number" name="beban" value="<?= $tarif->beban ?>" required><br>
-        <label>Tarif per kWh:</label>
-        <input type="number" name="tarif_perkwh" value="<?= $tarif->tarif_perkwh ?>" required><br>
-        <button type="submit">Update</button>
-        <button onclick="window.history.back()" style="cursor: pointer;">Kembali</button>
-    </form>
+    <div class="card shadow">
+        <div class="card-body">
+            <form action="<?= 'http://localhost/PLN/index.php/TarifListrikController/update/'.$tarif->id ?>" method="post">
+                <div class="form-group">
+                    <label>Kode Tarif:</label>
+                    <input type="text" name="kdtarif" value="<?= $tarif->kdtarif ?>" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Beban:</label>
+                    <input type="number" name="beban" value="<?= $tarif->beban ?>" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Tarif per kWh:</label>
+                    <input type="number" name="tarif_perkwh" value="<?= $tarif->tarif_perkwh ?>" class="form-control" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Update</button>
+                <button onclick="window.history.back()" class="btn btn-secondary">⬅ Kembali</button>
+            </form>
+        </div>
+    </div>
+</div>
 </body>
 </html>

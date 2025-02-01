@@ -1,36 +1,36 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <title>Data Tarif Listrik</title>
-</head>
-<body>
-    <h2>Data Tarif Listrik</h2>
-    <a href="<?= site_url('TarifListrikController/create') ?>">Tambah Tarif</a>
-    <table border="1">
-        <tr>
-            <th>ID</th>
-            <th>Kode Tarif</th>
-            <th>Beban</th>
-            <th>Tarif per kWh</th>
-            <th>Aksi</th>
-        </tr>
-        <?php foreach ($tarif as $t): ?>
-        <tr>
-            <td><?= $t->id ?></td>
-            <td><?= $t->kdtarif ?></td>
-            <td><?= $t->beban ?></td>
-            <td><?= $t->tarif_perkwh ?></td>
-            <td>
-                <a href="<?= site_url('TarifListrikController/edit/'.$t->id) ?>">Edit</a> |
-                <a href="<?= site_url('TarifListrikController/delete/'.$t->id) ?>" onclick="return confirm('Hapus data ini?')">Hapus</a>
-            </td>
-        </tr>
-        <?php endforeach; ?>
-    </table>
-    <br>
-    <a href="<?= site_url('DashboardController') ?>" style="">
-        Kembali ke Dashboard
-    </a>
+<?php $this->load->view('partials/sidebar'); ?>
+<div class="container-fluid">
+    <h1 class="h3 mb-4 text-gray-800">Kelola Tarif Listrik</h1>
+
+    <a href="<?= site_url('TarifListrikController/create') ?>" class="btn btn-primary mb-3">➕ Tambah Tarif</a>
+
+    <div class="card shadow">
+        <div class="card-body">
+            <table class="table table-bordered">
+                <tr>
+                    <th>ID</th>
+                    <th>Kode Tarif</th>
+                    <th>Beban</th>
+                    <th>Tarif per kWh</th>
+                    <th>Aksi</th>
+                </tr>
+                <?php foreach ($tarif as $t): ?>
+                <tr>
+                    <td><?= $t->id ?></td>
+                    <td><?= $t->kdtarif ?></td>
+                    <td><?= $t->beban ?></td>
+                    <td><?= $t->tarif_perkwh ?></td>
+                    <td>
+                        <a href="<?= site_url('TarifListrikController/edit/'.$t->id) ?>" class="btn btn-warning">✏ Edit</a>
+                        <a href="<?= site_url('TarifListrikController/delete/'.$t->id) ?>" class="btn btn-danger" onclick="return confirm('Yakin ingin menghapus?')">🗑 Hapus</a>
+                    </td>
+                </tr>
+                <?php endforeach; ?>
+            </table>
+        </div>
+    </div>
+</div>
+</div>
+</div>
 </body>
 </html>

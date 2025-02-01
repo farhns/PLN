@@ -1,32 +1,47 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <title>Tambah Tarif Listrik</title>
-</head>
-<body>
-    <h2>Tambah Tarif Listrik</h2>
+<?php $this->load->view('partials/sidebar'); ?>
+<div class="container-fluid">
+    <h1 class="h3 mb-4 text-gray-800">Tambah Tarif Listrik</h1>
 
-    <?php if ($this->session->flashdata('success')): ?>
-        <p style="color:green"><?= $this->session->flashdata('success'); ?></p>
-    <?php endif; ?>
+    <div class="card shadow">
+        <div class="card-body">
+            <?php if ($this->session->flashdata('success')): ?>
+                <div class="alert alert-success" role="alert">
+                    <?= $this->session->flashdata('success'); ?>
+                </div>
+            <?php endif; ?>
 
-    <?php if ($this->session->flashdata('error')): ?>
-        <p style="color:red"><?= $this->session->flashdata('error'); ?></p>
-    <?php endif; ?>
+            <?php if ($this->session->flashdata('error')): ?>
+                <div class="alert alert-danger" role="alert">
+                    <?= $this->session->flashdata('error'); ?>
+                </div>
+            <?php endif; ?>
 
-    <!-- <form action="<?= site_url('TarifListrikController/store') ?>" method="post"> -->
-    <form action="http://localhost/PLN/index.php/TarifListrikController/store" method="post">
-        <label>ID User:</label>
-        <input type="number" name="tbUser_id" required><br>
-        <label>Kode Tarif:</label>
-        <input type="text" name="kdtarif" required><br>
-        <label>Beban:</label>
-        <input type="number" name="beban" required><br>
-        <label>Tarif per kWh:</label>
-        <input type="number" name="tarif_perkwh" required><br>
-        <button type="submit">Simpan</button>
-        <button onclick="window.history.back()" style="cursor: pointer;">Kembali</button>
-    </form>
+            <form action="<?= site_url('TarifListrikController/store') ?>" method="post">
+                <div class="form-group">
+                    <label>ID User:</label>
+                    <input type="number" name="tbUser_id" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Kode Tarif:</label>
+                    <input type="text" name="kdtarif" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Beban:</label>
+                    <input type="number" name="beban" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Tarif per kWh:</label>
+                    <input type="number" name="tarif_perkwh" class="form-control" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Simpan</button>
+                <button onclick="window.history.back()" class="btn btn-secondary">⬅ Kembali</button>
+            </form>
+        </div>
+    </div>
+</div>
 </body>
 </html>
