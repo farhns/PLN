@@ -1,32 +1,43 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <title>Tambah Tagihan</title>
-</head>
-<body>
-    <h2>Tambah Tagihan</h2>
+<?php $this->load->view('partials/sidebar'); ?>
+<div class="container-fluid">
+    <h1 class="h3 mb-4 text-gray-800">Tambah Tagihan</h1>
 
     <?php if ($this->session->flashdata('success')): ?>
-        <p style="color:green"><?= $this->session->flashdata('success'); ?></p>
+        <p class="text-success"><?= $this->session->flashdata('success'); ?></p>
     <?php endif; ?>
 
     <?php if ($this->session->flashdata('error')): ?>
-        <p style="color:red"><?= $this->session->flashdata('error'); ?></p>
+        <p class="text-danger"><?= $this->session->flashdata('error'); ?></p>
     <?php endif; ?>
-    
-    <!-- <form action="<?= site_url('TagihanController/store') ?>" method="post"> -->
-    <form action="http://localhost/PLN/index.php/TagihanController/store" method="post">
-        <label>ID Pelanggan:</label>
-        <input type="number" name="tbPelanggan_id" required><br>
-        <label>Tahun Tagihan:</label>
-        <input type="text" name="tahun_tagihan" required><br>
-        <label>Bulan Tagihan:</label>
-        <input type="number" name="bulan_tagihan" required><br>
-        <label>Pemakaian (kWh):</label>
-        <input type="number" name="pemakaian" required><br>
-        <button type="submit">Simpan</button>
-        <button onclick="window.history.back()" style="cursor: pointer;">Kembali</button>
-    </form>
+
+    <div class="card shadow">
+        <div class="card-body">
+            <form action="<?= site_url('TagihanController/store') ?>" method="post">
+                <div class="form-group">
+                    <label>ID Pelanggan:</label>
+                    <input type="number" name="tbPelanggan_id" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Tahun Tagihan:</label>
+                    <input type="text" name="tahun_tagihan" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Bulan Tagihan:</label>
+                    <input type="number" name="bulan_tagihan" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Pemakaian (kWh):</label>
+                    <input type="number" name="pemakaian" class="form-control" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Simpan</button>
+                <button onclick="window.history.back()" class="btn btn-secondary">⬅ Kembali</button>
+            </form>
+        </div>
+    </div>
+</div>
 </body>
 </html>

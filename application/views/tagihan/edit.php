@@ -1,22 +1,30 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <title>Edit Tagihan</title>
-</head>
-<body>
-    <h2>Edit Tagihan</h2>
-    
-    <!-- <form action="<?= site_url('TagihanController/update/'.$tagihan->id) ?>" method="post"> -->
-    <form action="<?= 'http://localhost/PLN/index.php/TagihanController/update/'.$tagihan->id ?>" method="post">
-        <label>Tahun Tagihan:</label>
-        <input type="text" name="tahun_tagihan" value="<?= $tagihan->tahun_tagihan ?>" required><br>
-        <label>Bulan Tagihan:</label>
-        <input type="number" name="bulan_tagihan" value="<?= $tagihan->bulan_tagihan ?>" required><br>
-        <label>Pemakaian (kWh):</label>
-        <input type="number" name="pemakaian" value="<?= $tagihan->pemakaian ?>" required><br>
-        <button type="submit">Update</button>
-        <button onclick="window.history.back()" style="cursor: pointer;">Kembali</button>
-    </form>
+<?php $this->load->view('partials/sidebar'); ?>
+<div class="container-fluid">
+    <h1 class="h3 mb-4 text-gray-800">Edit Tagihan</h1>
+
+    <div class="card shadow">
+        <div class="card-body">
+            <form action="<?= site_url('TagihanController/update/'.$tagihan->id) ?>" method="post">
+                <div class="form-group">
+                    <label>Tahun Tagihan:</label>
+                    <input type="text" name="tahun_tagihan" value="<?= $tagihan->tahun_tagihan ?>" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Bulan Tagihan:</label>
+                    <input type="number" name="bulan_tagihan" value="<?= $tagihan->bulan_tagihan ?>" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Pemakaian (kWh):</label>
+                    <input type="number" name="pemakaian" value="<?= $tagihan->pemakaian ?>" class="form-control" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Update</button>
+                <button onclick="window.history.back()" class="btn btn-secondary">⬅ Kembali</button>
+            </form>
+        </div>
+    </div>
+</div>
 </body>
 </html>
