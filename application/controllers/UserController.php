@@ -37,8 +37,6 @@ class UserController extends CI_Controller {
         } else {
             $this->session->set_flashdata('error', 'Gagal menambahkan user.');
         }
-        var_dump($this->session->flashdata('error'));
-        exit;
         redirect('UserController/create');
     }
 

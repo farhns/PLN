@@ -72,7 +72,7 @@
             <hr class="sidebar-divider">
 
             <li class="nav-item">
-                <a class="nav-link text-danger" href="<?= site_url('AuthController/logout') ?>">
+                <a class="nav-link" href="<?= site_url('AuthController/logout') ?>">
                     <i class="fas fa-sign-out-alt"></i>
                     <span>Logout</span></a>
             </li>

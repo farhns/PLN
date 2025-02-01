@@ -1,36 +1,42 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <title>Riwayat Pembayaran</title>
-</head>
-<body>
-    <h2>Riwayat Pembayaran</h2>
+<?php $this->load->view('partials/sidebar'); ?>
+<div class="container-fluid">
+    <h1 class="h3 mb-4 text-gray-800">Riwayat Pembayaran</h1>
 
-    <table border="1">
-        <tr>
-            <th>ID</th>
-            <th>Pelanggan</th>
-            <th>Tahun</th>
-            <th>Bulan</th>
-            <th>Pemakaian</th>
-            <th>Status</th>
-        </tr>
-        <?php foreach ($riwayat as $r): ?>
-        <tr>
-            <td><?= $r->id ?></td>
-            <td><?= $r->tbPelanggan_id ?></td>
-            <td><?= $r->nama_pelanggan ?></td>
-            <td><?= $r->tahun_tagihan ?></td>
-            <td><?= $r->bulan_tagihan ?></td>
-            <td><?= $r->pemakaian ?> kWh</td>
-            <td style="color:green; font-weight:bold;"><?= $r->status ?></td>
-        </tr>
-        <?php endforeach; ?>
-    </table>
-    <br>
-    <a href="<?= site_url('DashboardController') ?>" style="">
-        Kembali ke Dashboard
-    </a>
+    <div class="card shadow">
+        <div class="card-body">
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Pelanggan</th>
+                        <th>Tahun</th>
+                        <th>Bulan</th>
+                        <th>Pemakaian</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach ($riwayat as $r): ?>
+                    <tr>
+                        <td><?= $r->id ?></td>
+                        <td><?= $r->tbPelanggan_id ?></td>
+                        <td><?= $r->nama_pelanggan ?></td>
+                        <td><?= $r->tahun_tagihan ?></td>
+                        <td><?= $r->bulan_tagihan ?></td>
+                        <td><?= $r->pemakaian ?> kWh</td>
+                        <td>
+                            <!-- <span class="badge badge-success"><?= $r->status ?></span> -->
+                            <button class="btn btn-primary" disabled <?= $r->status ?>>Lunas</button>
+                        </td>
+                    </tr>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <a href="<?= site_url('DashboardController') ?>" class="btn btn-secondary mt-3">⬅ Kembali ke Dashboard</a>
+</div>
+
 </body>
 </html>
