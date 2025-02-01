@@ -1,34 +1,35 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <title>Data User</title>
-</head>
-<body>
-    <h2>Data User</h2>
-    <a href="<?= site_url('UserController/create') ?>">Tambah User</a>
-    <table border="1">
-        <tr>
-            <th>ID</th>
-            <th>Username</th>
-            <th>Hak Akses</th>
-            <th>Aksi</th>
-        </tr>
-        <?php foreach ($users as $user): ?>
-        <tr>
-            <td><?= $user->id ?></td>
-            <td><?= $user->username ?></td>
-            <td><?= $user->hak_akses ?></td>
-            <td>
-                <a href="<?= site_url('UserController/edit/'.$user->id) ?>">Edit</a> |
-                <a href="<?= site_url('UserController/delete/'.$user->id) ?>" onclick="return confirm('Hapus user?')">Hapus</a>
-            </td>
-        </tr>
-        <?php endforeach; ?>
-    </table>
-    <br>
-    <a href="<?= site_url('DashboardController') ?>" style="">
-        Kembali ke Dashboard
-    </a>
+<?php $this->load->view('partials/sidebar'); ?>
+<div class="container-fluid">
+    <h1 class="h3 mb-4 text-gray-800">Kelola User</h1>
+
+    <a href="<?= site_url('UserController/create') ?>" class="btn btn-primary mb-3">➕ Tambah User</a>
+
+    <div class="card shadow">
+        <div class="card-body">
+            <table class="table table-bordered">
+                <tr>
+                    <th>ID</th>
+                    <th>Username</th>
+                    <th>Hak Akses</th>
+                    <th>Aksi</th>
+                </tr>
+                <?php foreach ($users as $user): ?>
+                <tr>
+                    <td><?= $user->id ?></td>
+                    <td><?= $user->username ?></td>
+                    <td><?= $user->hak_akses ?></td>
+                    <td>
+                        <a href="<?= site_url('UserController/edit/'.$user->id) ?>" class="btn btn-warning">✏ Edit</a>
+                        <a href="<?= site_url('UserController/delete/'.$user->id) ?>" class="btn btn-danger" onclick="return confirm('Yakin ingin menghapus?')">🗑 Hapus</a>
+                    </td>
+                </tr>
+                <?php endforeach; ?>
+            </table>
+        </div>
+    </div>
+</div>
+</div> <!-- END CONTENT -->
+</div> <!-- END CONTENT WRAPPER -->
+</div> <!-- END WRAPPER -->
 </body>
 </html>

@@ -1,18 +1,38 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <title>Dashboard Admin</title>
-</head>
-<body>
-    <h2>Selamat Datang, <?= $this->session->userdata('username'); ?></h2>
-    <ul>
-        <li><a href="<?= site_url('UserController') ?>">Kelola User</a></li>
-        <li><a href="<?= site_url('TarifListrikController') ?>">Kelola Tarif Listrik</a></li>
-        <li><a href="<?= site_url('PelangganController') ?>">Kelola Pelanggan</a></li>
-        <li><a href="<?= site_url('TagihanController') ?>">Kelola Tagihan</a></li>
-        <li><a href="<?= site_url('RiwayatController') ?>">Riwayat Pembayaran</a></li>
-        <li><a href="<?= site_url('AuthController/logout') ?>">Logout</a></li>
-    </ul>
+<?php $this->load->view('partials/sidebar'); ?>
+<div class="container-fluid">
+    <h1 class="h3 mb-4 text-gray-800">Dashboard</h1>
+
+    <div class="row">
+        <!-- Card User -->
+        <div class="col-md-4">
+            <div class="card shadow border-left-primary py-2">
+                <div class="card-body">
+                    <h5 class="card-title text-primary">Total Users</h5>
+                    <p class="card-text">10 Orang</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card Pelanggan -->
+        <div class="col-md-4">
+            <div class="card shadow border-left-success py-2">
+                <div class="card-body">
+                    <h5 class="card-title text-success">Total Pelanggan</h5>
+                    <p class="card-text">100 Pelanggan</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card Tagihan -->
+        <div class="col-md-4">
+            <div class="card shadow border-left-warning py-2">
+                <div class="card-body">
+                    <h5 class="card-title text-warning">Total Tagihan</h5>
+                    <p class="card-text">50 Tagihan</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>

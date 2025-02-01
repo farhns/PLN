@@ -1,0 +1,123 @@
+/* === STYLE HALAMAN LOGIN === */
+.uun{
+    color: red;
+}
+
+.login-container {
+    width: 350px;
+    margin: 100px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.login-form label {
+    display: block;
+    text-align: left;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 10px;
+    background: #007bff;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.login-form button:hover {
+    background: #0056b3;
+}
+
+.error-message {
+    color: red;
+    margin-bottom: 10px;
+}
+/* ====================================================================== */
+/* === STYLE SIDEBAR === */
+body {
+    display: flex;
+    margin: 0;
+    background: #f4f4f4;
+}
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background: #2c3e50;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid white;
+    padding-bottom: 10px;
+    font-weight: 600;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    margin: 5px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background: #34495e;
+    padding-left: 15px;
+}
+
+/* Tombol Logout */
+.sidebar ul li a.logout {
+    background: red;
+    font-weight: bold;
+    text-align: center;
+}
+
+.sidebar ul li a.logout:hover {
+    background: darkred;
+}
+
+/* === STYLE KONTEN UTAMA === */
+.content {
+    margin-left: 270px;
+    padding: 20px;
+    width: 100%;
+}

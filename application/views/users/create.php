@@ -1,31 +1,34 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <title>Tambah User</title>
-</head>
-<body>
-    <h2>Tambah User</h2>
+<?php $this->load->view('partials/sidebar'); ?>
+<div class="container-fluid">
+    <h1 class="h3 mb-4 text-gray-800">Tambah User</h1>
 
-    <!-- Pesan sukses -->
-    <?php if ($this->session->flashdata('success')): ?>
-        <p style="color:green"><?= $this->session->flashdata('success'); ?></p>
-    <?php endif; ?>
+    <div class="card shadow">
+        <div class="card-body">
+            <form action="<?= site_url('UserController/store') ?>" method="post">
+                <div class="form-group">
+                    <label>Username:</label>
+                    <input type="text" name="username" class="form-control" required>
+                </div>
 
-    <!-- Pesan error -->
-    <?php if ($this->session->flashdata('error')): ?>
-        <p style="color:red"><?= $this->session->flashdata('error'); ?></p>
-    <?php endif; ?>
-    <!-- <form action="<?= site_url('UserController/store') ?>" method="post"> -->
-    <form action="http://localhost/PLN/index.php/UserController/store" method="post">
-        <label>Username:</label>
-        <input type="text" name="username" required><br>
-        <label>Password:</label>
-        <input type="password" name="password" required><br>
-        <label>Hak Akses:</label>
-        <input type="number" name="hak_akses" required><br>
-        <button type="submit" style="cursor: pointer;">Simpan</button>
-        <button onclick="window.history.back()" style="cursor: pointer;">Kembali</button>
-    </form>
+                <div class="form-group">
+                    <label>Password:</label>
+                    <input type="password" name="password" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Hak Akses:</label>
+                    <select name="hak_akses" class="form-control" required>
+                        <option value="1">Admin</option>
+                        <option value="2">Operator</option>
+                        <option value="3">Pelanggan</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Simpan</button>
+                <button onclick="window.history.back()" class="btn btn-secondary">⬅ Kembali</button>
+            </form>
+        </div>
+    </div>
+</div>
 </body>
 </html>
