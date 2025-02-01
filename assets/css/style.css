@@ -1,57 +1,44 @@
-/* === STYLE HALAMAN LOGIN === */
-.uun{
-    color: red;
+/* === STYLE LOGIN PAGE === */
+body {
+    font-family: 'Nunito', sans-serif;
 }
 
-.login-container {
-    width: 350px;
-    margin: 100px auto;
-    padding: 20px;
-    background: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    text-align: center;
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-.login-container h2 {
-    margin-bottom: 20px;
-    color: #333;
+.card {
+    border-radius: 10px;
 }
 
-.login-form label {
-    display: block;
-    text-align: left;
-    margin: 10px 0 5px;
+.card-body {
+    padding: 30px;
+}
+
+h1 {
+    font-weight: 600;
+}
+
+.text-danger {
+    font-size: 14px;
+}
+
+.form-group label {
     font-weight: bold;
 }
 
-.login-form input {
-    width: 100%;
+.form-control {
+    border-radius: 5px;
     padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
+}
+
+.btn-primary {
+    padding: 10px;
     border-radius: 5px;
     font-size: 16px;
-}
-
-.login-form button {
-    width: 100%;
-    padding: 10px;
-    background: #007bff;
-    border: none;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.login-form button:hover {
-    background: #0056b3;
-}
-
-.error-message {
-    color: red;
-    margin-bottom: 10px;
 }
 /* ====================================================================== */
 /* === STYLE SIDEBAR === */
