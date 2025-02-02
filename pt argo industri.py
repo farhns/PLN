@@ -40,12 +40,12 @@ elif gol_jabatan == "3":
 elif gol_jabatan == "4":
     gol_jabatan = "Manajer"
     gaji_pokok = 8000000
-    presentase = int(input("Presentase: "))
+    presentase = int(input("Presentase Peningkatan Penjualan: "))
     if presentase > 10:
         bonus = gaji_pokok * (10 / 100)
-    elif presentase <= 10:
+    elif presentase >= 6:
         bonus = gaji_pokok * (5 / 100)
-    elif presentase <= 5:
+    elif presentase >= 1:
         bonus = gaji_pokok * (2 / 100)
     else:
         bonus = 0
@@ -53,13 +53,14 @@ elif gol_jabatan == "4":
 
 else:
     print("Golongan Jabatan Tidak Terdaftar")
-    exit()
+    exit()  # Jika ingin tetap melanjutkan, hapus exit() ini.
 
+# Menampilkan hasil penggajian
 print("-------------------------------------")
 print("-----Penggajian PT Argo Industri-----")
-print("NIP :  ", nip)
-print("Nama Pekerja : ", nama)
-print("Golongan Jabatan: ", gol_jabatan)
-print("Tahun Masuk : ", tahun_masuk)
-print("Gaji Pokok : ", gaji_pokok)
-print("Total Gaji : ", gaji_akhir)
+print(f"NIP: {nip}")
+print(f"Nama Pekerja: {nama}")
+print(f"Golongan Jabatan: {gol_jabatan}")
+print(f"Tahun Masuk: {tahun_masuk}")
+print(f"Gaji Pokok: {gaji_pokok}")
+print(f"Total Gaji: {gaji_akhir}")

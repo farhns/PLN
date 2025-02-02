@@ -88,7 +88,7 @@
             <!-- Logout -->
             <div class="sidebar-heading">Logout</div>
             <li class="nav-item">
-                <a class="nav-link pb-0 text-danger" href="<?= site_url('AuthController/logout'); ?>">
+                <a class="nav-link pb-0" href="<?= site_url('AuthController/logout'); ?>">
                     <i class="fas fa-sign-out-alt"></i>
                     <span>Logout</span>
                 </a>
