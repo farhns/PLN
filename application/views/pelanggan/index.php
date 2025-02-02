@@ -2,7 +2,9 @@
 <div class="container-fluid">
     <h1 class="h3 mb-4 text-gray-800">Kelola Data Pelanggan</h1>
 
-    <a href="<?= site_url('PelangganController/create') ?>" class="btn btn-primary mb-3">➕ Tambah Pelanggan</a>
+    <a href="<?= site_url('PelangganController/create') ?>" class="btn btn-primary mb-3">
+        <i class="fas fa-user-plus"></i> Tambah Pelanggan
+    </a>
 
     <div class="card shadow">
         <div class="card-body">
@@ -21,8 +23,12 @@
                     <td><?= $p->nama_pelanggan ?></td>
                     <td><?= $p->alamat ?></td>
                     <td>
-                        <a href="<?= site_url('PelangganController/edit/'.$p->id) ?>" class="btn btn-warning">✏ Edit</a>
-                        <a href="<?= site_url('PelangganController/delete/'.$p->id) ?>" class="btn btn-danger" onclick="return confirm('Yakin ingin menghapus?')">🗑 Hapus</a>
+                        <a href="<?= site_url('PelangganController/edit/'.$p->id) ?>" class="btn btn-warning">
+                            <i class="fas fa-edit"></i> Edit
+                        </a>
+                        <a href="<?= site_url('PelangganController/delete/'.$p->id) ?>" class="btn btn-danger" onclick="return confirm('Yakin ingin menghapus?')">
+                            <i class="fas fa-trash"></i> Hapus
+                        </a>
                     </td>
                 </tr>
                 <?php endforeach; ?>

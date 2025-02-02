@@ -20,8 +20,12 @@
                     <input type="number" name="pemakaian" value="<?= $tagihan->pemakaian ?>" class="form-control" required>
                 </div>
 
-                <button type="submit" class="btn btn-primary">Update</button>
-                <button onclick="window.history.back()" class="btn btn-secondary">⬅ Kembali</button>
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-check"></i> Update
+                </button>
+                <button onclick="window.history.back()" class="btn btn-secondary">
+                    <i class="fas fa-xmark"></i> Kembali
+                </button>
             </form>
         </div>
     </div>

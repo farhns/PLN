@@ -42,8 +42,6 @@
             </table>
         </div>
     </div>
-
-    <a href="<?= site_url('DashboardController') ?>" class="btn btn-secondary mt-3">⬅ Kembali ke Dashboard</a>
 </div>
 
 </body>
