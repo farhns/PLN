@@ -4,7 +4,7 @@
 
     <div class="card shadow">
         <div class="card-body">
-            <form action="<?= site_url('TagihanController/update/'.$tagihan->id) ?>" method="post">
+            <form action="<?= site_url('Tagihan/update/'.$tagihan->id) ?>" method="post">
                 <div class="form-group">
                     <label>Tahun Tagihan:</label>
                     <input type="text" name="tahun_tagihan" value="<?= $tagihan->tahun_tagihan ?>" class="form-control" required>

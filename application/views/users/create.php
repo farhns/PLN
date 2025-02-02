@@ -4,7 +4,7 @@
 
     <div class="card shadow">
         <div class="card-body">
-            <form action="<?= site_url('UserController/store') ?>" method="post">
+            <form action="<?= site_url('User/store') ?>" method="post">
                 <div class="form-group">
                     <label>Username:</label>
                     <input type="text" name="username" class="form-control" required>

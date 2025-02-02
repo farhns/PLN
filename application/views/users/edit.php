@@ -4,7 +4,7 @@
 
     <div class="card shadow">
         <div class="card-body">
-            <form action="<?= site_url('UserController/update/'.$user->id) ?>" method="post">
+            <form action="<?= site_url('User/update/'.$user->id) ?>" method="post">
                 <div class="form-group">
                     <label>Username:</label>
                     <input type="text" name="username" value="<?= $user->username ?>" class="form-control" required>

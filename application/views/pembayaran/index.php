@@ -31,7 +31,7 @@
                         <td><?= $t->status ?></td>
                         <td>
                             <?php if ($t->status == 'Belum Lunas'): ?>
-                                <a href="<?= site_url('PembayaranController/bayar/'.$t->id) ?>" class="btn btn-secondary">Bayar</a>
+                                <a href="<?= site_url('Pembayaran/bayar/'.$t->id) ?>" class="btn btn-secondary">Bayar</a>
                             <?php else: ?>
                                 <button class="btn btn-primary" disabled>Lunas</button>
                             <?php endif; ?>

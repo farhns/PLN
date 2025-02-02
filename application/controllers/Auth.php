@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class AuthController extends CI_Controller {
+class Auth extends CI_Controller {
     public function __construct() {
         parent::__construct();
         $this->load->model('UserModel');
@@ -22,15 +22,15 @@ class AuthController extends CI_Controller {
             $this->session->set_userdata('user_id', $user->id);
             $this->session->set_userdata('username', $user->username);
             $this->session->set_userdata('hak_akses', $user->hak_akses);
-            redirect('DashboardController');
+            redirect('Dashboard');
         } else {
             $this->session->set_flashdata('error', 'Username atau password salah!');
-            redirect('AuthController/login');
+            redirect('Auth/login');
         }
     }
 
     public function logout() {
         $this->session->sess_destroy();
-        redirect('AuthController/login');
+        redirect('Auth/login');
     }
 }

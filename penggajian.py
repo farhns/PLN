@@ -1,5 +1,5 @@
-nip = input("NIP: ")
-nama = input("Nama: ")
+nip = input( "NIP      : ")
+nama = input("Nama     : ")
 tahun_masuk = input("Tahun Masuk: ")
 
 # Menampilkan pilihan golongan jabatan

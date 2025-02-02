@@ -12,7 +12,7 @@
 
     <div class="card shadow">
         <div class="card-body">
-            <form action="<?= site_url('TagihanController/store') ?>" method="post">
+            <form action="<?= site_url('Tagihan/store') ?>" method="post">
                 <div class="form-group">
                     <label>ID Pelanggan:</label>
                     <input type="number" name="tbPelanggan_id" class="form-control" required>

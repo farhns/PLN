@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class TarifListrikController extends CI_Controller {
+class TarifListrik extends CI_Controller {
     public function __construct() {
         parent::__construct();
         $this->load->model('TarifListrikModel');
@@ -30,7 +30,7 @@ class TarifListrikController extends CI_Controller {
             $this->session->set_flashdata('error', 'Gagal menambahkan tarif listrik.');
         }
 
-        redirect('TarifListrikController/create');
+        redirect('TarifListrik/create');
     }
 
     public function edit($id) {
@@ -52,7 +52,7 @@ class TarifListrikController extends CI_Controller {
             $this->session->set_flashdata('error', 'Gagal memperbarui tarif listrik.');
         }
 
-        redirect('TarifListrikController');
+        redirect('TarifListrik');
     }
 
     public function delete($id) {
@@ -62,6 +62,6 @@ class TarifListrikController extends CI_Controller {
             $this->session->set_flashdata('error', 'Gagal menghapus tarif listrik.');
         }
 
-        redirect('TarifListrikController');
+        redirect('TarifListrik');
     }
 }

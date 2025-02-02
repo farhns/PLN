@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class PelangganController extends CI_Controller {
+class Pelanggan extends CI_Controller {
     public function __construct() {
         parent::__construct();
         $this->load->model('PelangganModel');
@@ -30,7 +30,7 @@ class PelangganController extends CI_Controller {
             $this->session->set_flashdata('error', 'Gagal menambahkan pelanggan.');
         }
 
-        redirect('PelangganController/create');
+        redirect('Pelanggan/create');
     }
 
     public function edit($id) {
@@ -52,7 +52,7 @@ class PelangganController extends CI_Controller {
             $this->session->set_flashdata('error', 'Gagal memperbarui pelanggan.');
         }
 
-        redirect('PelangganController');
+        redirect('Pelanggan');
     }
 
     public function delete($id) {
@@ -62,6 +62,6 @@ class PelangganController extends CI_Controller {
             $this->session->set_flashdata('error', 'Gagal menghapus pelanggan.');
         }
 
-        redirect('PelangganController');
+        redirect('Pelanggan');
     }
 }

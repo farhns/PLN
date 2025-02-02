@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class UserController extends CI_Controller {
+class User extends CI_Controller {
     public function __construct() {
         parent::__construct();
         $this->load->model('UserModel');
@@ -22,7 +22,7 @@ class UserController extends CI_Controller {
         // Cek apakah username sudah ada
         if ($this->UserModel->isUsernameExists($username)) {
             $this->session->set_flashdata('error', 'Username sudah digunakan, coba yang lain.');
-            redirect('UserController/create');
+            redirect('User/create');
             return;
         }
 
@@ -37,7 +37,7 @@ class UserController extends CI_Controller {
         } else {
             $this->session->set_flashdata('error', 'Gagal menambahkan user.');
         }
-        redirect('UserController/create');
+        redirect('User/create');
     }
 
 
@@ -53,11 +53,11 @@ class UserController extends CI_Controller {
             'hak_akses' => $this->input->post('hak_akses')
         ];
         $this->UserModel->updateUser($id, $data);
-        redirect('UserController');
+        redirect('User');
     }
 
     public function delete($id) {
         $this->UserModel->deleteUser($id);
-        redirect('UserController');
+        redirect('User');
     }
 }

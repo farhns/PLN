@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class CetakTagihanController extends CI_Controller {
+class CetakTagihan extends CI_Controller {
     public function __construct() {
         parent::__construct();
         $this->load->model('TagihanModel');

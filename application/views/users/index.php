@@ -2,7 +2,7 @@
 <div class="container-fluid">
     <h1 class="h3 mb-4 text-gray-800">Kelola User</h1>
 
-    <a href="<?= site_url('UserController/create') ?>" class="btn btn-primary mb-3">
+    <a href="<?= site_url('User/create') ?>" class="btn btn-primary mb-3">
         <i class="fas fa-user-plus"></i> Tambah User
     </a>
 
@@ -21,10 +21,10 @@
                     <td><?= $user->username ?></td>
                     <td><?= $user->hak_akses ?></td>
                     <td>
-                        <a href="<?= site_url('UserController/edit/'.$user->id) ?>" class="btn btn-warning">
+                        <a href="<?= site_url('User/edit/'.$user->id) ?>" class="btn btn-warning">
                             <i class="fas fa-edit"></i> Edit
                         </a>
-                        <a href="<?= site_url('UserController/delete/'.$user->id) ?>" class="btn btn-danger" onclick="return confirm('Yakin ingin menghapus?')">
+                        <a href="<?= site_url('User/delete/'.$user->id) ?>" class="btn btn-danger" onclick="return confirm('Yakin ingin menghapus?')">
                             <i class="fas fa-trash"></i> Hapus
                         </a>
                     </td>

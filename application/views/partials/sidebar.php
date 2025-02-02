@@ -15,7 +15,7 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= site_url('DashboardController') ?>">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= site_url('Dashboard') ?>">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-bolt"></i>
                 </div>
@@ -28,7 +28,7 @@
             <!-- Home Section -->
             <div class="sidebar-heading">Home</div>
             <li class="nav-item active">
-                <a class="nav-link pb-0" href="<?= site_url('DashboardController'); ?>">
+                <a class="nav-link pb-0" href="<?= site_url('Dashboard'); ?>">
                     <i class="fa fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span>
                 </a>
@@ -40,31 +40,31 @@
             <!-- Master Data Section -->
             <div class="sidebar-heading">Master Data</div>
             <li class="nav-item">
-                <a class="nav-link pb-0" href="<?= site_url('UserController'); ?>">
+                <a class="nav-link pb-0" href="<?= site_url('User'); ?>">
                     <i class="fas fa-users"></i>
                     <span>Kelola User</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link pb-0" href="<?= site_url('TarifListrikController'); ?>">
+                <a class="nav-link pb-0" href="<?= site_url('TarifListrik'); ?>">
                     <i class="fas fa-bolt"></i>
                     <span>Kelola Tarif Listrik</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link pb-0" href="<?= site_url('PelangganController'); ?>">
+                <a class="nav-link pb-0" href="<?= site_url('Pelanggan'); ?>">
                     <i class="fas fa-user"></i>
                     <span>Kelola Pelanggan</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link pb-0" href="<?= site_url('TagihanController'); ?>">
+                <a class="nav-link pb-0" href="<?= site_url('Tagihan'); ?>">
                     <i class="fas fa-file-invoice"></i>
                     <span>Kelola Tagihan</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link pb-0" href="<?= site_url('PembayaranController'); ?>">
+                <a class="nav-link pb-0" href="<?= site_url('Pembayaran'); ?>">
                     <i class="fas fa-money-bill-wave"></i>
                     <span>Pembayaran</span>
                 </a>
@@ -76,7 +76,7 @@
             <!-- Laporan Section -->
             <div class="sidebar-heading">Laporan</div>
             <li class="nav-item">
-                <a class="nav-link pb-0" href="<?= site_url('RiwayatController'); ?>">
+                <a class="nav-link pb-0" href="<?= site_url('Riwayat'); ?>">
                     <i class="fas fa-history"></i>
                     <span>Riwayat Pembayaran</span>
                 </a>
@@ -88,7 +88,7 @@
             <!-- Logout -->
             <div class="sidebar-heading">Logout</div>
             <li class="nav-item">
-                <a class="nav-link pb-0" href="<?= site_url('AuthController/logout'); ?>">
+                <a class="nav-link pb-0" href="<?= site_url('Auth/logout'); ?>">
                     <i class="fas fa-sign-out-alt"></i>
                     <span>Logout</span>
                 </a>

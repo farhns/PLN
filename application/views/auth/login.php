@@ -22,7 +22,7 @@
                             </div>
                         <?php endif; ?>
 
-                        <form action="<?= site_url('AuthController/process_login') ?>" method="post">
+                        <form action="<?= site_url('Auth/process_login') ?>" method="post">
                             <div class="form-group">
                                 <label for="username">Username:</label>
                                 <input type="text" name="username" class="form-control form-control-user" placeholder="Masukkan username" required>

@@ -23,8 +23,8 @@
             <td><?= $t->bulan_tagihan ?></td>
             <td><?= $t->pemakaian ?></td>
             <td>
-                <a href="<?= site_url('CetakTagihanController/cetak/'.$t->id) ?>">Lihat</a> | 
-                <a href="<?= site_url('CetakTagihanController/cetak_pdf/'.$t->id) ?>">Cetak PDF</a>
+                <a href="<?= site_url('CetakTagihan/cetak/'.$t->id) ?>">Lihat</a> | 
+                <a href="<?= site_url('CetakTagihan/cetak_pdf/'.$t->id) ?>">Cetak PDF</a>
             </td>
         </tr>
         <?php endforeach; ?>

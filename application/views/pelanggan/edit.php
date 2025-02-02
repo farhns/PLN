@@ -4,7 +4,7 @@
 
     <div class="card shadow">
         <div class="card-body">
-            <form action="<?= site_url('PelangganController/update/'.$pelanggan->id) ?>" method="post">
+            <form action="<?= site_url('Pelanggan/update/'.$pelanggan->id) ?>" method="post">
                 <div class="form-group">
                     <label>Pelanggan ID:</label>
                     <input type="text" name="pelanggan_id" value="<?= $pelanggan->pelanggan_id ?>" class="form-control" required>

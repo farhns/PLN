@@ -4,7 +4,7 @@
 
     <div class="card shadow">
         <div class="card-body">
-            <form action="<?= site_url('PelangganController/store') ?>" method="post">
+            <form action="<?= site_url('Pelanggan/store') ?>" method="post">
                 <?php if ($this->session->flashdata('success')): ?>
                     <p style="color:green"><?= $this->session->flashdata('success'); ?></p>
                 <?php endif; ?>

@@ -16,7 +16,7 @@
                 </div>
             <?php endif; ?>
 
-            <form action="<?= site_url('TarifListrikController/store') ?>" method="post">
+            <form action="<?= site_url('TarifListrik/store') ?>" method="post">
                 <div class="form-group">
                     <label>ID User:</label>
                     <input type="number" name="tbUser_id" class="form-control" required>

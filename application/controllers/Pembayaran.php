@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class PembayaranController extends CI_Controller {
+class Pembayaran extends CI_Controller {
     public function __construct() {
         parent::__construct();
         $this->load->model('TagihanModel');
@@ -23,6 +23,6 @@ class PembayaranController extends CI_Controller {
         $this->TagihanModel->updateTagihan($id, $data);
 
         $this->session->set_flashdata('success', 'Pembayaran berhasil!');
-        redirect('PembayaranController');
+        redirect('Pembayaran');
     }
 }
