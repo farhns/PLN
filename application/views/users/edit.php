@@ -19,6 +19,11 @@
                     </select>
                 </div>
 
+                <div class="form-group">
+                    <label>Password Baru (kosongkan jika tidak ingin diubah):</label>
+                    <input type="password" name="password" class="form-control">
+                </div>
+
                 <button type="submit" class="btn btn-primary">
                     <i class="fas fa-check"></i> Update
                 </button>

@@ -47,14 +47,24 @@ class User extends CI_Controller {
     }
 
     public function update($id) {
+        $this->load->model('UserModel');
+    
         $data = [
             'username' => $this->input->post('username'),
-            'password' => password_hash($this->input->post('password'), PASSWORD_DEFAULT),
-            'hak_akses' => $this->input->post('hak_akses')
+            'hak_akses' => $this->input->post('hak_akses'),
         ];
+    
+        // Cek apakah password diisi
+        if (!empty($this->input->post('password'))) {
+            $data['password'] = password_hash($this->input->post('password'), PASSWORD_DEFAULT);
+        }
+    
         $this->UserModel->updateUser($id, $data);
+    
+        $this->session->set_flashdata('success', 'User berhasil diperbarui!');
         redirect('User');
     }
+    
 
     public function delete($id) {
         $this->UserModel->deleteUser($id);
