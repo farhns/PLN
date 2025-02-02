@@ -16,66 +16,91 @@
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= site_url('DashboardController') ?>">
-                <div class="sidebar-brand-icon">
+                <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-bolt"></i>
                 </div>
                 <div class="sidebar-brand-text mx-3">PLN PT Argo</div>
             </a>
 
-            <hr class="sidebar-divider my-0">
+            <!-- Divider -->
+            <hr class="sidebar-divider">
 
-            <li class="nav-item">
-                <a class="nav-link" href="<?= site_url('DashboardController') ?>">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
+            <!-- Home Section -->
+            <div class="sidebar-heading">Home</div>
+            <li class="nav-item active">
+                <a class="nav-link pb-0" href="<?= site_url('DashboardController'); ?>">
+                    <i class="fa fa-fw fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
             </li>
 
-            <hr class="sidebar-divider">
-            <div class="sidebar-heading">Management</div>
+            <!-- Divider -->
+            <hr class="sidebar-divider mt-3">
 
+            <!-- Master Data Section -->
+            <div class="sidebar-heading">Master Data</div>
             <li class="nav-item">
-                <a class="nav-link" href="<?= site_url('UserController') ?>">
+                <a class="nav-link pb-0" href="<?= site_url('UserController'); ?>">
                     <i class="fas fa-users"></i>
-                    <span>Kelola User</span></a>
+                    <span>Kelola User</span>
+                </a>
             </li>
-
             <li class="nav-item">
-                <a class="nav-link" href="<?= site_url('TarifListrikController') ?>">
+                <a class="nav-link pb-0" href="<?= site_url('TarifListrikController'); ?>">
                     <i class="fas fa-bolt"></i>
-                    <span>Kelola Tarif Listrik</span></a>
+                    <span>Kelola Tarif Listrik</span>
+                </a>
             </li>
-
             <li class="nav-item">
-                <a class="nav-link" href="<?= site_url('PelangganController') ?>">
+                <a class="nav-link pb-0" href="<?= site_url('PelangganController'); ?>">
                     <i class="fas fa-user"></i>
-                    <span>Kelola Pelanggan</span></a>
+                    <span>Kelola Pelanggan</span>
+                </a>
             </li>
-
             <li class="nav-item">
-                <a class="nav-link" href="<?= site_url('TagihanController') ?>">
+                <a class="nav-link pb-0" href="<?= site_url('TagihanController'); ?>">
                     <i class="fas fa-file-invoice"></i>
-                    <span>Kelola Tagihan</span></a>
+                    <span>Kelola Tagihan</span>
+                </a>
             </li>
-
             <li class="nav-item">
-                <a class="nav-link" href="<?= site_url('PembayaranController') ?>">
+                <a class="nav-link pb-0" href="<?= site_url('PembayaranController'); ?>">
                     <i class="fas fa-money-bill-wave"></i>
-                    <span>Pembayaran</span></a>
+                    <span>Pembayaran</span>
+                </a>
             </li>
 
+            <!-- Divider -->
+            <hr class="sidebar-divider mt-3">
+
+            <!-- Laporan Section -->
+            <div class="sidebar-heading">Laporan</div>
             <li class="nav-item">
-                <a class="nav-link" href="<?= site_url('RiwayatController') ?>">
+                <a class="nav-link pb-0" href="<?= site_url('RiwayatController'); ?>">
                     <i class="fas fa-history"></i>
-                    <span>Riwayat Pembayaran</span></a>
+                    <span>Riwayat Pembayaran</span>
+                </a>
             </li>
 
-            <hr class="sidebar-divider">
+            <!-- Divider -->
+            <hr class="sidebar-divider mt-3">
 
+            <!-- Logout -->
+            <div class="sidebar-heading">Logout</div>
             <li class="nav-item">
-                <a class="nav-link" href="<?= site_url('AuthController/logout') ?>">
+                <a class="nav-link pb-0 text-danger" href="<?= site_url('AuthController/logout'); ?>">
                     <i class="fas fa-sign-out-alt"></i>
-                    <span>Logout</span></a>
+                    <span>Logout</span>
+                </a>
             </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider mt-3">
+            
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
 
         </ul>
         <!-- End of Sidebar -->
@@ -85,3 +110,4 @@
 
             <!-- Main Content -->
             <div id="content">
+            <script src="<?= base_url('assets/js/sidebar.js'); ?>"></script>
