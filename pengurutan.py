@@ -53,7 +53,7 @@ def bubble_sort(data):
             if data[j] > data[j + 1]:
                 # Fungsi tukar data
                 data[j], data[j + 1] = data[j + 1], data[j]
-    return data
+    return data  # Mengembalikan hasil pengurutan
 
 # Fungsi untuk menyimpan data ke file
 def simpan_ke_file(data):
